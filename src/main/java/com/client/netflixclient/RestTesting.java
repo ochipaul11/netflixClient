@@ -24,7 +24,7 @@ public class RestTesting implements CommandLineRunner {
     GETTING A LIST OF ALL THE MOVIES IN SERVER
  */
         ResponseEntity<List<Movie>> responseEntity = restTemplate.exchange(
-                "http://localhost:9090/movies",
+                "http://localhost:9090/movie",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<Movie>>() {
@@ -38,7 +38,7 @@ public class RestTesting implements CommandLineRunner {
 
         }
 /*
-  ADDING A CLIENT TO THE SERBER
+  ADDING A CLIENT TO THE SERVER
  */
         Client client1 = new Client((long) 20131,"Paul Kamau");
         Client createdClient1 = restTemplate.postForObject("http://localhost:9090/client",client1,Client.class);
@@ -60,7 +60,7 @@ GETTING AN UPDATED LIST OF THE MOVIES IN THE SERVER
  */
 
         ResponseEntity<List<Movie>> responseEntity2 = restTemplate.exchange(
-                "http://localhost:9090/movies",
+                "http://localhost:9090/movie",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<Movie>>() {
