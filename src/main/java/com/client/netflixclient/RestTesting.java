@@ -47,7 +47,7 @@ public class RestTesting implements CommandLineRunner {
 /*
  ADDING ONE SUGGESTED MOVIE TO THE SERVER BY THE CLIENT
  */
-       System.err.println("Adding Movie ----------------------");
+       System.err.println("Adding Movie by the client ----------------------");
         Movie movie1 = new Movie("Avengers","Suggested");
         movie1.addMovieGenre(genre1);
         movie1.addMovieGenre(genre3);
@@ -65,7 +65,7 @@ GETTING AN UPDATED LIST OF THE MOVIES IN THE SERVER
                 null,
                 new ParameterizedTypeReference<List<Movie>>() {
                 }) ;
-        System.err.println("All Movies in Netflix Originals and user Recommendations-------------");
+        System.err.println("All Netflix Originals plus user suggestions-------------");
         List<Movie> updatedMovies = responseEntity2.getBody();
         for(Movie movie: movies) {
 
