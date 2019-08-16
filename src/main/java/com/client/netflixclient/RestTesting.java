@@ -67,7 +67,7 @@ GETTING AN UPDATED LIST OF THE MOVIES IN THE SERVER
                 }) ;
         System.err.println("All Netflix Originals plus user suggestions-------------");
         List<Movie> updatedMovies = responseEntity2.getBody();
-        for(Movie movie: movies) {
+        for(Movie movie: updatedMovies) {
 
             System.out.println(movie.toString());
             movie.genreToString();
