@@ -84,21 +84,14 @@ public class Movie {
         genres.addAll(genre);
     }
 
-    public void genreToString(){
-
-        for(Genre genre:genres){
-            System.out.println(genre.toStrings());
-        }
-
-    }
-
+    @Override
     public String toString(){
 
         return "Movie{" +
                 "id=" + id +
                 ", movieName='" + movieName + '\'' +
-                ", movieType='" + movieType + '\''
-
+                ", movieType='" + movieType + '\'' +
+                      genres.toString() + '\''
                 ;
     }
 }
