@@ -24,17 +24,10 @@ public class Movie {
     public Movie(String movieName, String movieType, Client client) {
         this.movieName = movieName;
         this.movieType = movieType;
-        // this.genres = genres;
         this.client = client;
     }
 
-    /* public Movie(String movieName, String movieType, List<Genre> genres, Client client) {
-        this.movieName = movieName;
-        this.movieType = movieType;
-        this.genres = genres;
-        this.client = client;
-    }
-*/
+
 
     public Long getId() {
         return id;
