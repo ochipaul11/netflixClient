@@ -34,7 +34,7 @@ public class RestTesting implements CommandLineRunner {
         for(Movie movie: movies) {
 
             System.out.println(movie.toString());
-            movie.genreToString();
+
 
         }
 /*
@@ -53,8 +53,8 @@ public class RestTesting implements CommandLineRunner {
         movie1.addMovieGenre(genre3);
         Movie createdMovie = restTemplate.postForObject("http://localhost:9090/client/14/addMovie/3/4",movie1,Movie.class);
         System.out.println(createdMovie.toString());
-        System.out.println(genre1.toStrings());
-        System.out.println(genre3.toStrings());
+        System.out.println(genre1.toString());
+        System.out.println(genre3.toString());
 /*
 GETTING AN UPDATED LIST OF THE MOVIES IN THE SERVER
  */
@@ -70,7 +70,7 @@ GETTING AN UPDATED LIST OF THE MOVIES IN THE SERVER
         for(Movie movie: updatedMovies) {
 
             System.out.println(movie.toString());
-            movie.genreToString();
+
 
         }
 
